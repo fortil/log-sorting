@@ -7,6 +7,7 @@ module.exports = (logSources, printer) => {
     data.sort((object1, object2) => {
       const t1 = new Date(object1.date).getTime();
       const t2 = new Date(object2.date).getTime();
+
       if (t1 === t2) {
         return 0;
       }
@@ -14,6 +15,7 @@ module.exports = (logSources, printer) => {
     }).forEach((obj) => {
       printer.print(obj);
     });
+    
     printer.done();
     return console.log("Async sort complete.");
   });
