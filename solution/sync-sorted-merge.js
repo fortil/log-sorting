@@ -3,7 +3,7 @@ const _ = require("lodash");
 // Print all entries, across all of the sources, in chronological order.
 
 module.exports = (logSources, printer) => {
-  const entries = logSources.map(i => i.pop()).sort((object1, object2) => {
+  logSources.map(i => i.pop()).sort((object1, object2) => {
     const t1 = new Date(object1.date).getTime();
     const t2 = new Date(object2.date).getTime();
     if (t1 === t2) {
