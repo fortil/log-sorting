@@ -1,5 +1,4 @@
 "use strict";
-const _ = require("lodash");
 // Print all entries, across all of the sources, in chronological order.
 
 module.exports = (logSources, printer) => {
@@ -14,7 +13,7 @@ module.exports = (logSources, printer) => {
   }).forEach((obj) => {
     printer.print(obj);
   });
-  
+
   printer.done();
   return console.log("Sync sort complete.");
 };
